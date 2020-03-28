@@ -2,9 +2,24 @@
 let signBtn = document.getElementById('signbtn');
 /* let bgBox = document.getElementsByClassName('bgbox'); */
 let hide = document.getElementById('movebox');
-let point = document.getElementsByClassName('pick')
 signBtn.addEventListener('click', moveLeft);
 signBtn.addEventListener('click', changeColor);
+
+function changeColor(){  
+    let pos = 0;
+/*     let positionright = 0;  */
+    let id = setInterval(frame, 5);    
+    function frame(){
+    let point = document.getElementById('throw');
+    if(pos == 20){ 
+    clearInterval(id);
+} else { 
+    pos++;
+    point.style.right = pos + 'px';
+    signBtn.classList.add('color_selected');
+    }   
+}
+}
 
 function moveLeft(){
 let position = 460;    
@@ -44,21 +59,6 @@ hide.style.right = position + 'px';
 }
 }
 
-function changeColor(){
-let position = 0;    
-let id = setInterval(frame, 5);    
-function frame(){ 
-if(position == 100) { 
-clearInterval(id);
-position++;
-point.style.right = position + 'px';
-point.style.top = position + 'px';
-
-
-}
-signBtn.classList.add('color_selected');
-}
-}
 
 
 
