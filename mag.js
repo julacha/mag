@@ -32,13 +32,14 @@ let id = setInterval(frame, 5);
  /*        document.getElementsById('movebox'); */
         let hide = document.getElementById('movebox');
             if(hide.style.visibility = "visible"){
-                hide.style.opacity = "0";
                 hide.style.visibility = "hidden";
-           
+                hide.style.opacity = "0";
+                    $("movebox").fadeToggle("slow", "linear");
                 var show = document.getElementById('showbox');
                 if(show.style.visibility = "hidden"){
                     show.style.visibility = "visible";
                     show.style.opacity = "1";
+                    $("showbox").fadeToggle("slow", "linear");      
         }
     }
 }
@@ -66,8 +67,8 @@ hide.style.right = position + 'px';
 }
 }
 
-$("signBtn").click(function() {
+/* $("signBtn").click(function() {
     $("movebox").fadeToggle("slow", "linear");
     $("showbox").fadeToggle("slow", "linear");
 });
-
+ */

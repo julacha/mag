@@ -144,7 +144,8 @@ background-color: darkturquoise;
         height: 460px;
         visibility: hidden;
         z-index:5;
-        transition: .55s opacity, .55s visibility;
+        transition: opacity 2s;
+        opacity: 0;
 }
 
 .signone{
@@ -245,6 +246,8 @@ background-color: darkturquoise;
     z-index:5;
     margin-left:440px; 
     visibility:visible;
+    transition: opacity 2s, visibility 2s;
+    opacity: 1;
 }
 
 .logone{
