@@ -2,6 +2,8 @@
 let signBtn = document.getElementById('signbtn');
 /* let bgBox = document.getElementsByClassName('bgbox'); */
 let hide = document.getElementById('movebox');
+let blockNoAccount = document.getElementsByClassName('blockone')[0];
+
 signBtn.addEventListener('click', moveLeft);
 signBtn.addEventListener('click', changeColor);
 
@@ -11,11 +13,12 @@ function changeColor(){
     let id = setInterval(frame, 5);    
     function frame(){
     let point = document.getElementById('throw');
-    if(pos == 20){ 
-    clearInterval(id);
-} else { 
-    pos++;
+    if(pos ==  200){ 
+/*   clearInterval(id);
+} else { */
+   pos++;
     point.style.right = pos + 'px';
+    /* point.style.top = pos + 'px'; */
     signBtn.classList.add('color_selected');
     }   
 }
@@ -29,13 +32,17 @@ let id = setInterval(frame, 5);
  /*        document.getElementsById('movebox'); */
         let hide = document.getElementById('movebox');
             if(hide.style.visibility = "visible"){
+                hide.style.opacity = "0";
                 hide.style.visibility = "hidden";
+           
                 var show = document.getElementById('showbox');
                 if(show.style.visibility = "hidden"){
                     show.style.visibility = "visible";
+                    show.style.opacity = "1";
         }
     }
 }
+
 /*     while (bgBox.firstChild){
     bgBox.removeChild(bgBox.firstChild);
     }
@@ -59,6 +66,8 @@ hide.style.right = position + 'px';
 }
 }
 
-
-
+$("signBtn").click(function() {
+    $("movebox").fadeToggle("slow", "linear");
+    $("showbox").fadeToggle("slow", "linear");
+});
 

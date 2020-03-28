@@ -38,6 +38,7 @@ background-repeat: no-repeat;
     opacity:0.9;
     position: absolute;
     color: white ;
+    opacity:0.9;
 }
 .acc_one{
     font-size: 28px;
@@ -145,6 +146,7 @@ background-color: darkturquoise;
         z-index:5;
         transition: .55s opacity, .55s visibility;
 }
+
 .signone{
         display: flex;
         justify-content: space-between;
