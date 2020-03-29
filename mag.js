@@ -7,32 +7,32 @@ let blockNoAccount = document.getElementsByClassName('blockone')[0];
 signBtn.addEventListener('click', moveLeft);
 signBtn.addEventListener('click', changeColor);
 
-function changeColor(){  
-   /*  let pos = 0;
-    let id = setInterval(frame, 5);    
-    function frame(){
+function changeColor(id, speed){  
     let point = document.getElementById('throw');
-    if(pos == 200){ 
- clearInterval(id);
-} else { 
-   pos++;
-    point.style.right = pos + 'px';
-    point.style.top = pos + 'px'; 
-    signBtn.classList.add('color_selected');
-    }    */
-    let point = document.getElementById('throw');
-    var pos = 0;
+        var right = parseInt(point.style.left) || 0;
+        var bottom = parseInt(point.style.top) || 0;
+        
+        if(point.offsetTop > window.innerHeight) right = bottom = 0 
+        else right = bottom += speed;
+        
+        point.style.left = right + "px";
+        point.style.top =  bottom + "px";
+    
+        var move = setTimeout(() => move45(id, speed), 50);
+}
+    move45('test', 1);
+/*     var pos = 0;
     var id = setInterval(frame,5);
     function frame(){ 
-    if(pos == 1){
+    if(pos == 50){
         clearInterval(id);
     }else{
-        pos++;
+        pos--;
         point.style.top = pos + "px";
         point.style.left = pos + "px";
     }
-}
-}  
+} */
+
 
 
 function moveLeft(){
