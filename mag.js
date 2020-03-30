@@ -34,21 +34,21 @@ document.all.point.style.left=x+dx //Перемещение по OX
 function changeColor(){  
     let point = document.getElementById('throw');
  let postop = 5;
- let posleft = 8;
+ let posleft =150;
 /*    let dx = 5;
    let dy = 10; */
     let id = setInterval(frame,5);
     function frame(){
  /*    let y = parseInt(point.style.top);
     let x = parseInt(point.style.left); */
-    if(postop == 100 /* && posleft == -10 */){  
+    if(postop == 96 /* && posleft == -10 */){  
  /*        point.style.top == y+dy &&
         point.style.right == x+dx){ */
         clearInterval(id);
     } else {
     postop++;
     posleft++;
-    point.style.left = posleft + 'px';
+    point.style.right = posleft + 'px';
     point.style.bottom = postop + 'px';
     }
 }
