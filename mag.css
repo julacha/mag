@@ -68,8 +68,14 @@ background-repeat: no-repeat;
     margin-top: 31px;
 }
 
-.color_selected {
-background-color: darkturquoise;
+.signbtn{
+    border: 2px solid rgb(73, 171, 254);
+    border-radius: 30px;
+    background-color: rgb(15,26,47);
+    opacity:0.9;
+    padding: 18px 40px;
+    color: darkturquoise;
+    margin-top: 31px;
 }
 
 .point{
