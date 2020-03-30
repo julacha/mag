@@ -33,19 +33,27 @@ document.all.point.style.left=x+dx //Перемещение по OX
 
 function changeColor(){  
     let point = document.getElementById('throw');
-     let id = setInterval(frame,5);
-    function frame(){ 
-    if(pos == 100){
+ let postop = 5;
+ let posleft = 8;
+/*    let dx = 5;
+   let dy = 10; */
+    let id = setInterval(frame,5);
+    function frame(){
+ /*    let y = parseInt(point.style.top);
+    let x = parseInt(point.style.left); */
+    if(postop == 100 /* && posleft == -10 */){  
+ /*        point.style.top == y+dy &&
+        point.style.right == x+dx){ */
         clearInterval(id);
-        signBtn.classList.add('color_selected');
-    }else{
-        pos++;
-        point.style.top = pos + "px";
-        point.style.left = pos + "px";
+    } else {
+    postop++;
+    posleft++;
+    point.style.left = posleft + 'px';
+    point.style.bottom = postop + 'px';
     }
 }
-
 }
+
 
 function moveLeft(){
 let position = 460;    

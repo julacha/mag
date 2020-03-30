@@ -35,11 +35,11 @@ background-repeat: no-repeat;
     height: 420px;
     z-index:1;
     background-color: rgb(15,26,47);
-    opacity:0.9;
     position: absolute;
     color: white ;
     opacity:0.9;
 }
+
 .acc_one{
     font-size: 28px;
 }
@@ -72,6 +72,10 @@ background-repeat: no-repeat;
 background-color: darkturquoise;
 }
 
+.point{
+    display: flex;
+    justify-content: end;
+}
 #throw{
     background-color:yellow;
     height: 30px;
