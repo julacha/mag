@@ -68,16 +68,9 @@ background-repeat: no-repeat;
     margin-top: 31px;
 }
 
-.signbtn{
-    border: 2px solid rgb(73, 171, 254);
-    border-radius: 30px;
-    background-color: rgb(15,26,47);
-    opacity:0.9;
-    padding: 18px 40px;
-    color: darkturquoise;
-    margin-top: 31px;
-    cursor: none;
-}
+#signbtn:focus {
+    outline: none !important
+    }
 
 .point{
     display: flex;
@@ -92,7 +85,16 @@ background-repeat: no-repeat;
     margin-left: 50%;
     position: absolute;
     visibility: hidden;
+    animation-duration: 1s;
+    animation-name: twinkle;
 }
+
+@keyframes twinkle {
+    20% {
+      transform: scale(0.5);
+      opacity: 0.5;
+    }
+  }
 .blocktwo{
     padding-top: 110px;
     padding-left: 80px;
@@ -131,7 +133,6 @@ background-repeat: no-repeat;
     padding: 18px 45px;
     color:white;
     margin-top: 31px;
-
 }
 
 .colortext{
@@ -244,7 +245,12 @@ background-repeat: no-repeat;
     font-size: 16px;
     margin-top: 30px;
     border:none;
-}  
+} 
+
+.signbtn:focus {
+    outline: none !important
+    }
+
 #movebox{
     padding-top: 100px;
     padding-left: 90px;
@@ -348,8 +354,11 @@ background-repeat: no-repeat;
     margin-top: 30px;
     border:none;
 }
- 
 
+.logbtn:focus {
+    outline: none !important
+    }
+ 
 .footer{
         grid-area: 3/1/4/4;
         height: 190px; 
