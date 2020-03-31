@@ -3,7 +3,6 @@ let signBtn = document.getElementById('signbtn');
 let hide = document.getElementById('movebox');
 let show = document.getElementById('showbox');
 
-signBtn.addEventListener('click', moveLeft);
 signBtn.addEventListener('click', changeColor);
 
 function changeColor(){  
@@ -24,7 +23,8 @@ function changeColor(){
     } 
 }
 }
-
+setTimeout(function (){
+    signBtn.addEventListener('click', moveLeft);
 function moveLeft(){
 let position = 460;    
 let id = setInterval(frame, 4);    
@@ -48,6 +48,5 @@ position++;
 hide.style.right = position + 'px';
 }
 }
-setTimeout(moveLeft, 5000);
 }
-
+}, 2000);
