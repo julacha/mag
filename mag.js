@@ -4,14 +4,23 @@ let hide = document.getElementById('movebox');
 let show = document.getElementById('showbox');
 
 signBtn.addEventListener('click', changeColor);
+signBtn.addEventListener('click', moveLeft);
 
 function changeColor(){  
     let point = document.getElementById('throw');
+    if(point.style.visibility = "hidden"){
+        point.style.visibility = "visible";
+        show.style.opacity = "1";
+        $("showbox").fadeToggle("slow", "linear");}  
     let postop = 5;
     let posleft =150;
     let id = setInterval(frame,5);
     function frame(){
-    if(postop == 96){  
+    if(postop == 96){ 
+    if(point.style.visibility = "visible"){
+            point.style.visibility = "hidden";
+            point.style.opacity = "0";
+            $("showbox").fadeToggle("slow", "linear");}
     clearInterval(id);
     } else {
     postop++;
@@ -23,9 +32,9 @@ function changeColor(){
     } 
 }
 }
-setTimeout(function (){
-    signBtn.addEventListener('click', moveLeft);
+
 function moveLeft(){
+setTimeout(function () {
 let position = 460;    
 let id = setInterval(frame, 4);    
     function frame(){   
@@ -48,5 +57,6 @@ position++;
 hide.style.right = position + 'px';
 }
 }
+}, 800);
 }
-}, 2000);
+

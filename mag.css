@@ -76,6 +76,7 @@ background-repeat: no-repeat;
     padding: 18px 40px;
     color: darkturquoise;
     margin-top: 31px;
+    cursor: none;
 }
 
 .point{
@@ -90,6 +91,7 @@ background-repeat: no-repeat;
     margin-top: 5%;
     margin-left: 50%;
     position: absolute;
+    visibility: hidden;
 }
 .blocktwo{
     padding-top: 110px;
