@@ -6,23 +6,32 @@ let show = document.getElementById('showbox');
 signBtn.addEventListener('click', changeColor);
 signBtn.addEventListener('click', moveLeft);
 
+let options = {
+    'effect': 'drop',
+    'effectOptions': {
+        'color': 'rgba(0,0,255,0.5)',
+        'radius': 100
+    }
+};
+
+
 let color = 'deepskyblue';
 function changeColor(){  
     let point = document.getElementById('throw');
     if(point.style.visibility = "hidden"){
+        $("showbox").fadeToggle("slow", "linear");
         point.style.visibility = "visible";
-        show.style.opacity = "1";
-        $("showbox").fadeToggle("slow", "linear");}  
+        point.style.opacity = "1";}  
     let postop = 5;
     let posleft =150;
     let id = setInterval(frame,5);
     function frame(){
     if(postop == 96){ 
     if(point.style.visibility = "visible"){
-        
+            $(point).twinkle(options);
             point.style.visibility = "hidden";
-            point.style.opacity = "0";
-            $("showbox").fadeToggle("slow", "linear");}
+            $("showbox").fadeToggle("slow", "linear");
+            point.style.opacity = "0";}
     clearInterval(id);
     signBtn.style.background = color;
     } else {
@@ -32,6 +41,7 @@ function changeColor(){
     point.style.bottom = postop + 'px';
     }
 }
+
 }
 
 function moveLeft(){
